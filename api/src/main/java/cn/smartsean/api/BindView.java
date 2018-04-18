@@ -8,10 +8,13 @@ import android.view.View;
  */
 
 public class BindView {
-
     public static final String SUFFIX = "$$ViewInject";
-
+    /**
+     * 在Activity中使用
+     * @param activity
+     */
     public static void bind(Activity activity) {
+        //根据传入的activity得到viewInject对象，并注入
         ViewInject viewInject = findProxyActivity(activity);
         viewInject.inject(activity, activity);
     }
@@ -21,6 +24,11 @@ public class BindView {
         viewInject.inject(object, view);
     }
 
+    /**
+     * 查找我们生成的类
+     * @param object
+     * @return
+     */
     private static ViewInject findProxyActivity(Object object) {
         try {
             Class clz = object.getClass();

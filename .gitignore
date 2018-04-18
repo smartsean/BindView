@@ -7,3 +7,11 @@
 /build
 /captures
 .externalNativeBuild
+/.idea/misc.xml
+.idea/markdown-exported-files.xml
+.idea/markdown-navigator.xml
+annotation/libs/
+api/libs/
+api/src/main/res/drawable/
+app/libs/
+compile/libs/

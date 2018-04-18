@@ -1,11 +1,10 @@
 package cn.smartsean.bindview;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
 import cn.smartsean.annotation.BindView;
-import cn.smartsean.api.ViewInject;
 
 /**
  * @author smartsean

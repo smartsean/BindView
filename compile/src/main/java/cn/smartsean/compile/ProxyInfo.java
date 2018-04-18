@@ -13,12 +13,28 @@ import javax.lang.model.util.Elements;
  */
 
 public class ProxyInfo {
+    /**
+     * 包名
+     */
     private String mPackageName;
+    /**
+     * 类名
+     */
     private String mClassName;
+    /**
+     * 类或接口程序元素
+     */
     private TypeElement mTypeElement;
-
+    /**
+     * 用于存储id和元素的HashMap
+     */
     public Map<Integer, VariableElement> injectVariables = new HashMap<>();
 
+    /**
+     * 构造方法中初始化成员变量
+     * @param elements
+     * @param classElement
+     */
     public ProxyInfo(Elements elements, TypeElement classElement) {
         this.mTypeElement = classElement;
         //获取包名
@@ -65,13 +81,19 @@ public class ProxyInfo {
         builder.append("\n\t}");
     }
 
+    /**
+     * 获取全称
+     * @return
+     */
     public String getProxyClassFullName() {
         return this.mPackageName + "." + this.mClassName;
     }
 
+    /**
+     * 获取类型元素
+     * @return
+     */
     public TypeElement getTypeElement() {
         return mTypeElement;
     }
-
-
 }
